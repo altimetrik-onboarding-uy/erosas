@@ -1,0 +1,36 @@
+<!-- 
+*	QA Training Package 1A
+ -->
+<apex:page controller="BenefitsPerEmployee" standardStylesheets="true" >
+	
+	<script>
+		function IEtest(){
+			if(navigator.userAgent.indexOf('MSIE') >= 0){
+				alert('Oops, an unexpected error occurred.');
+			}
+		}
+	</script>
+	
+    <apex:pageBlock title="{!title}">
+		<apex:form >
+			<apex:commandButton action="{!refresh}" value="{!buttonText}" />
+		</apex:form>
+        <apex:pageBlockTable value="{!benefits}" var="item" rowClasses="odd, even">
+            <apex:column headerValue="Employee">
+            	<apex:outputLink value="/{!item.Id}">{!item.Employee__r.Name}</apex:outputLink>
+            </apex:column> 
+            <apex:column headerValue="Title" value="{!item.Employee__r.Department}"/> 
+            <apex:column headerValue="Department" value="{!item.Employee__r.Title}"/> 
+            <apex:column headerValue="Gross Pay" value="{!item.Gross_Pay__c}"/> 
+            <apex:column headerValue="Net Pay" value="{!item.Net_Pay__c}"/> 
+            <apex:column headerValue="Medical Insurance" value="{!item.Has_Medical_Insurance__c}"/> 
+            <apex:column headerValue="Dental Vision Insurance" value="{!item.Has_Dental_Vision_Insurance__c}"/> 
+            <apex:column headerValue="Is approved" value="{!item.Is_approved__c}"/> 
+            <apex:column >
+            	<apex:outputLink value="/{!item.Id}" onclick="IEtest();" >View</apex:outputLink>
+            </apex:column> 
+        </apex:pageBlockTable> 
+
+    </apex:pageBlock> 
+
+</apex:page>

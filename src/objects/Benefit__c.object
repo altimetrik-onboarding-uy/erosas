@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Dental_Vision_Insurance__c</fullName>
+        <externalId>false</externalId>
+        <label>Dental/Vision Insurance</label>
+        <picklist>
+            <controllingField>Has_Dental_Vision_Insurance__c</controllingField>
+            <picklistValues>
+                <fullName>Employee only</fullName>
+                <default>true</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee and partner</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee and family</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Benefits</relationshipLabel>
+        <relationshipName>Benefits</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Gross_Pay__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Pay</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Has_Dental_Vision_Insurance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Dental/Vision Insurance</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Medical_Insurance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Medical Insurance</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is approved</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Medical_Insurance__c</fullName>
+        <externalId>false</externalId>
+        <label>Medical Insurance</label>
+        <picklist>
+            <controllingField>Has_Medical_Insurance__c</controllingField>
+            <picklistValues>
+                <fullName>Employee only</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee and partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee and family</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Net_Pay__c</fullName>
+        <externalId>false</externalId>
+        <formula>Gross_Pay__c * 0.88</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Pay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Benefit</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>B-{0000}</displayFormat>
+        <label>Benefit Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Benefits</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Gross_Pay_can_not_be_over_10000</fullName>
+        <active>true</active>
+        <errorConditionFormula>Gross_Pay__c &gt; 10001</errorConditionFormula>
+        <errorDisplayField>Dental_Vision_Insurance__c</errorDisplayField>
+        <errorMessage>The gross pay can not be over $10,000</errorMessage>
+    </validationRules>
+</CustomObject>

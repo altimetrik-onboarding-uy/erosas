@@ -1,0 +1,7 @@
+<apex:page title="Contacts" standardController="Contact">
+    <apex:pageBlockSection >
+     First Name: {! Contact.FirstName } <br/>
+     Assistant: {! Contact.AssistantName } <br/>
+     Asst. Phone: <a href="tel:Contact.AssistantPhone">{!Contact.AssistantPhone }</a>       
+    </apex:pageBlockSection>
+</apex:page>

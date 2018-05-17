@@ -1,0 +1,5 @@
+<div style="font-family: Tahoma; font-size: 12px;">Hello, <b>{!Benefit__c.Employee__c}</b>, a benefit of value <b>{!Benefit__c.Gross_Pay__c}</b> was created for you.
+<br>
+
+<br>
+Congratulations.</div>
