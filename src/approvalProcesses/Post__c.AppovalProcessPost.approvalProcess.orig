@@ -17,9 +17,10 @@
                 <type>userHierarchyField</type>
             </approver>
         </assignedApprover>
-        <label>Approval step</label>
-        <name>Approval_step</name>
+        <label>firstStep</label>
+        <name>firstStep</name>
     </approvalStep>
+    <emailTemplate>Training/Email_to_Manager</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
@@ -28,27 +29,7 @@
             <value>Under Review</value>
         </criteriaItems>
     </entryCriteria>
-    <finalApprovalActions>
-        <action>
-            <name>RecordApproved</name>
-            <type>Alert</type>
-        </action>
-        <action>
-            <name>UpdateAfterApprove</name>
-            <type>FieldUpdate</type>
-        </action>
-    </finalApprovalActions>
-    <finalApprovalRecordLock>false</finalApprovalRecordLock>
-    <finalRejectionActions>
-        <action>
-            <name>RecordRejected</name>
-            <type>Alert</type>
-        </action>
-        <action>
-            <name>UpdateAfterReject</name>
-            <type>FieldUpdate</type>
-        </action>
-    </finalRejectionActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>AppovalProcessPost</label>
     <nextAutomatedApprover>
