@@ -1,51 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
-        <apexClass>AccountHandler</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>BenefitsPerEmployee</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ContactAndLeadSearch</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ContactSearch</apexClass>
+        <apexClass>ApprovalProcessTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>ContactsTodayController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>ContactsTodayController_test</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>OlderAccountsUtility</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>StringArrayTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestVerifyDate</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>VerifyDate</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>prueba_Test</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>updateOlderAccounts</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -346,41 +306,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Benefit__c.Dental_Vision_Insurance__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Employee_Email__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Has_Dental_Vision_Insurance__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Has_Medical_Insurance__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Is_approved__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Medical_Insurance__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Benefit__c.Net_Pay__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Campaign.ActualCost</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -542,31 +467,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Campaign.Type</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Campsite_Reservation__c.End_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Campsite_Reservation__c.Start_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Campsite_Reservation__c.User__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Campsite__c.Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Candidate__c.Prospect_Rating__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -761,17 +661,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Contact.Languages__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Contact.LeadSource</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Contact.Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1331,7 +1221,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Position__c.Usuario__c</field>
+        <field>Post__c.Author_Writer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Post__c.Content__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Post__c.Published__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Post__c.Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Post__c.Tags__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Post__c.Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1372,11 +1287,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.StockKeepingUnit</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Priority__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1431,26 +1341,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Trail__c.Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Trail__c.Distance__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Trail__c.Hiring_Manager__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Trail__c.Last_Inspection_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>User.DB_Region__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1461,22 +1351,10 @@
         <layout>Asset-Asset Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Benefit__c-Benefit Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Campaign-Campaign Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CampaignMember-Campaign Member Page Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Campsite_Reservation__c-Campsite Reservation Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Campsite__c-Campsite Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Candidate__c-Formato Candidate</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
@@ -1488,15 +1366,7 @@
         <layout>CollaborationGroup-Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Contact-Contact %28Sales%29 Layout</layout>
-        <recordType>Contact.The_RecordType_1</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Contact-Contact Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Contact-Contact Layout</layout>
-        <recordType>Contact.The_RecordType_2</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContentVersion-Content Version Layout</layout>
@@ -1517,9 +1387,6 @@
         <layout>FeedItem-Formato Elemento de noticias en tiempo real</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Fundraiser__c-Formato Fundraiser</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Global-Global Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1532,16 +1399,7 @@
         <layout>Idea-Idea Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>JobPositing__c-Formato JobPositing</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>JobTracker-Job Tracker Layout - Winter %2716</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Job_Application__c-Formato Job Application</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Junction__c-Formato Junction</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Lead-Lead Layout</layout>
@@ -1568,7 +1426,7 @@
         <layout>OrderItem-Order Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Position__c-Formato Position</layout>
+        <layout>Post__c-Post Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
@@ -1580,10 +1438,7 @@
         <layout>Product2-Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Project__c-Project Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Review__c-Formato Review</layout>
+        <layout>QuickText-Quick Text Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Scorecard-Scorecard Layout</layout>
@@ -1607,9 +1462,6 @@
         <layout>Task-Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Trail__c-Formato Trail</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>User-User Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1623,12 +1475,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>UserProvisioningRequest-User Provisioning Request Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Vehicle__c-Formato Garage</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Website__c-Formato Website</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkCoaching-Coaching Layout</layout>
@@ -1675,43 +1521,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Benefit__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
         <object>Campaign</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Campsite_Reservation__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Campsite__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Candidate__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1765,43 +1575,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Fundraiser__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
         <object>Idea</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>JobPositing__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Job_Application__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Junction__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1846,7 +1620,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Position__c</object>
+        <object>Post__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1873,25 +1647,7 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Project__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
         <object>QuickText</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Review__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1948,126 +1704,13 @@
         <object>StreamingChannel</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Trail__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Vehicle__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Website__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <pageAccesses>
-        <apexPage>BenefitsPerEmployee</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>BusinessCard</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ContactView</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CreateContact</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>DisplayImage</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>DisplayUserInfo</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>HelloMobile</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Job_Candidate_Help</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>MobileContactList</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>OpportunityStageTips</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>ShowAssistantInfo</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>prueba</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Contact.The_RecordType_1</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Contact.The_RecordType_2</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>Benefit__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Benefits_Per_Employee</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Campsite__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Fundraiser__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>HelloMobile</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>MyData</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>MyLightning</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Vehicle__c</tab>
+        <tab>Post__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
