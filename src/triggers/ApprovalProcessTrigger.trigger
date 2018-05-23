@@ -2,7 +2,7 @@ trigger ApprovalProcessTrigger on Post__c (after update ) {
 	List<Approval.ProcessSubmitRequest> approvalReqList=new List<Approval.ProcessSubmitRequest>();
     Id currentUserId = UserInfo.getUserId();
     User cUser = [SELECT Id,managerId FROM User where Id=:currentUserId];     
-   
+    if (String.isNotEmpty(cUser.ManagerId)){
     try {
         for(Post__c p: Trigger.new){          
             if(trigger.oldMap.get(p.Id).Status__c != p.Status__c &&  p.Status__c == 'Under Review'){
@@ -17,4 +17,6 @@ trigger ApprovalProcessTrigger on Post__c (after update ) {
         } catch (exception e) {
             Trigger.new[0].addError('text'+e.getMessage());
         }
+        
+     }     
 }

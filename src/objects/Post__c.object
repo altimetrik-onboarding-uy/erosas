@@ -137,6 +137,17 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+    <listViews>
+        <fullName>Post_info</fullName>
+        <columns>NAME</columns>
+        <columns>Title__c</columns>
+        <columns>Author_Writer__c</columns>
+        <columns>Published__c</columns>
+        <columns>Status__c</columns>
+        <columns>Tags__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Post info</label>
+    </listViews>
     <nameField>
         <label>Post Name</label>
         <type>Text</type>
@@ -145,23 +156,30 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
+        <fullName>Owners_manager_can_chante_to_ready</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+    (ISCHANGED(Status__c)),
+   ($User.Id &lt;&gt; Owner:User.ManagerId ),
+   ISPICKVAL(Status__c ,&quot;Ready&quot;)
+)</errorConditionFormula>
+        <errorMessage>Only the owner’s manager can change the status to Ready.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Post_created_with_draft_status</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (NOT(ISPICKVAL(Status__c ,&quot;Draft&quot;)),
+    ISNEW())</errorConditionFormula>
+        <errorMessage>Post can only be created with Draft status</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>Status_change</fullName>
         <active>true</active>
-        <description>OR(
-   AND (NOT(ISPICKVAL(Status__c ,&quot;Draft&quot;)),
-   ISNEW()),
-   (AND(ISCHANGED(Status__c),
-       NOT(ISPICKVAL(Status__c ,&quot;Under Review&quot;))
-      )
-    ) 
-)</description>
-        <errorConditionFormula>OR(
-   AND (NOT(ISPICKVAL(Status__c ,&quot;Draft&quot;)),
-   ISNEW()),
-   (AND(ISCHANGED(Status__c),
-       NOT(ISPICKVAL(Status__c ,&quot;Under Review&quot;))
-      )
-    ) 
+        <errorConditionFormula>AND(  
+   (ISCHANGED(Status__c)),
+   (NOT(ISPICKVAL(Status__c ,&quot;Under Review&quot;))),
+   (NOT(ISPICKVAL(Status__c ,&quot;Ready&quot;)))
+       
 )</errorConditionFormula>
         <errorMessage>Wrong status</errorMessage>
     </validationRules>
