@@ -1,0 +1,8 @@
+.project
+.settings
+salesforce.schema
+Referenced Packages
+config/
+debug/
+Bloggist (LCF).sublime-project
+force\.json
