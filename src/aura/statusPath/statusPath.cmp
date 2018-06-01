@@ -1,0 +1,62 @@
+<aura:component controller="PostPathController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >     
+   
+    <aura:attribute name="objInfo" type="account" default="{sobjectType : 'Account'}" />   
+    <aura:attribute name="post" type="Object"/>
+    <aura:attribute name="postRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>   
+    <force:recordData aura:id="postRecordLoader" 
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      fields="Status__c"
+                      mode="EDIT"
+                      targetRecord="{!v.post}"
+                      targetFields="{!v.postRecord}" 
+                      targetError="{!v.recordError}"
+                      recordUpdated="{!c.handleRecordUpdated}"
+                      />  
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>
+    
+    <div class="slds-path">
+        <div class="slds-grid slds-path__track">
+            <div class="slds-grid slds-path__scroller-container">
+                <div class="slds-path__scroller" role="application">
+                    <div class="slds-path__scroller_inner">            
+                        <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                            <li aura:id="Draft" class="slds-path__item  slds-is-incomplete" role="presentation">
+                                <a  aria-selected="false" class="slds-path__link" href="javascript:void(0);"  role="option" tabindex="0">                           
+                                    <span class="slds-path__title">Draft</span>
+                                </a>
+                                
+                            </li>
+                            <li aura:id="Published" class="slds-path__item slds-is-incomplete" role="presentation">
+                                <a  aria-selected="false" class="slds-path__link" href="javascript:void(0);"  role="option" tabindex="-1">                       
+                                    <span class="slds-path__title">Published</span>
+                                </a>
+                            </li>
+                            <li aura:id="Under Review" class="slds-path__item slds-is-incomplete" role="presentation">
+                                <a  aria-selected="false" class="slds-path__link" href="javascript:void(0);"  role="option" tabindex="-2">                            
+                                    <span class="slds-path__title">Under Review</span>
+                                </a>
+                            </li>
+                            <li aura:id="Ready" class="slds-path__item slds-is-incomplete" role="presentation">
+                                <a  aria-selected="false" class="slds-path__link" href="javascript:void(0);"  role="option" tabindex="-3">              
+                                    <span class="slds-path__title">Ready</span>
+                                </a>
+                            </li>
+                            <div class="slds-grid slds-path__action">
+                                <button aura:id="nextStepbtn" onclick="{!c.onPicklistChange}" class="nextStepbtn slds-button slds-button_brand slds-path__next-step" >Next Step</button>
+                            </div>
+                           
+                        </ul>      
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</aura:component>

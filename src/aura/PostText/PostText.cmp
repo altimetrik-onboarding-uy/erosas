@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">     
+    <ltng:require scripts="{!$Resource.markedjs}"></ltng:require>
+    
+    <aura:attribute name="post" type="Object"/>
+    <aura:attribute name="postRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>   
+    <force:recordData aura:id="postRecordLoader" 
+    recordId="{!v.recordId}"
+    layoutType="FULL"
+    fields="Content__c"
+    mode="EDIT"
+    targetRecord="{!v.post}"
+    targetFields="{!v.postRecord}" 
+    targetError="{!v.recordError}"                    
+    />
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>
+    <aura:attribute name="labelText" default="{!v.postRecord.Content__c}" type="String"></aura:attribute>   
+    <aura:attribute name="labelProcessed"  type="String" ></aura:attribute>
+    
+    <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea" >
+    	<lightning:textarea name="text" value="{!v.labelText}" 
+                            label="Enter the content here: " maxlength="300" 
+                            onchange="{!c.recordUpdated}"/>    	
+    </div>
+    <hr></hr>
+    <div maxlength="300">
+        <label class="uiLabel-left form-element__label uiLabel">
+        	<span>Text preview:</span>
+            <br/>
+    	</label>
+        <div aria-label="" class="slds-rich-text-area__content slds-grow slds-wrap">
+         <ui:outputRichText value="{!v.labelProcessed}"> </ui:outputRichText>
+          
+        </div>
+      
+      
+    </div>
+   
+</aura:component>
