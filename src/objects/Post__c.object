@@ -177,13 +177,23 @@
         <errorMessage>Post can only be created with Draft status</errorMessage>
     </validationRules>
     <validationRules>
+        <fullName>Published_status_after_ready</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+  ISCHANGED(Status__c), 
+  NOT(ISPICKVAL(PRIORVALUE(Status__c),&quot;Ready&quot;)),
+  ISPICKVAL(Status__c,&quot;Published&quot;)
+)</errorConditionFormula>
+        <errorMessage>User can publish the record after is Ready</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>Status_change</fullName>
         <active>true</active>
         <errorConditionFormula>AND(  
    (ISCHANGED(Status__c)),
    (NOT(ISPICKVAL(Status__c ,&quot;Under Review&quot;))),
-   (NOT(ISPICKVAL(Status__c ,&quot;Ready&quot;)))
-       
+   (NOT(ISPICKVAL(Status__c ,&quot;Ready&quot;))),
+   (NOT(ISPICKVAL(Status__c ,&quot;Published&quot;)))
 )</errorConditionFormula>
         <errorMessage>Wrong status</errorMessage>
     </validationRules>
