@@ -1,5 +1,13 @@
 ({
-    recordUpdated: function(component, event, helper) {  
+    handleRecordUpdated:function(component,event,helper){
+        //Get imputtext
+        var ptxt = component.get("v.labelText");
+        //Process the text with marked.js and set the output
+        ptxt = marked(ptxt);
+        component.set("v.labelProcessed", ptxt);   
+    },
+    recordUpdated: function(component, event, helper) { 
+        
         //Clear outputfield
         component.set("v.labelProcessed","");
         //Get imputtext
@@ -23,5 +31,36 @@
             //}   
             }));}, 3000);  
         
- 	}
+ 	},
+    keyCheck : function(component, event, helper){ 
+        var ctrlPressed=0;
+        var shiftPressed=0;
+        shiftPressed=event.shiftKey;
+        ctrlPressed =event.ctrlKey;
+        var txt = "" + component.get("v.labelText");
+        var cB = "****";
+        var cI = "**";
+        var cL = "````";
+        var cSL = "``````";
+        if ((shiftPressed || ctrlPressed)&& (event.keyCode<16 || event.keyCode>18)) {        
+        // Ctrl + b
+        if(ctrlPressed && (event.keyCode==66)){
+             txt = txt + cB;            
+        } else 
+            // Ctrl + i    
+            if(ctrlPressed && (event.keyCode==73)){
+                 txt = txt+ cI;
+            } else
+                // Ctrl + l
+                if ((ctrlPressed && !shiftPressed) && (event.keyCode==76)){
+                     txt = txt+ cL;
+                } else
+                    // Ctrl + Shift + l
+                    if((shiftPressed && ctrlPressed)&& (event.keyCode==76)){
+                        txt = txt + cSL;
+                    }
+            component.set("v.labelText",txt);
+        } 
+    }
+        
 })
