@@ -1,6 +1,5 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">     
-    <ltng:require scripts="{!$Resource.markedjs}"></ltng:require>
-    
+    <ltng:require scripts="{!$Resource.markedjs}"></ltng:require>   
     <aura:attribute name="post" type="Object"/>
     <aura:attribute name="postRecord" type="Object"/>
     <aura:attribute name="recordError" type="String"/>   
@@ -11,7 +10,8 @@
     mode="EDIT"
     targetRecord="{!v.post}"
     targetFields="{!v.postRecord}" 
-    targetError="{!v.recordError}"                    
+    targetError="{!v.recordError}" 
+    recordUpdated="{!c.handleRecordUpdated}"        
     />
     <aura:if isTrue="{!not(empty(v.recordError))}">
         <div class="recordError">
@@ -23,10 +23,10 @@
     <aura:attribute name="labelText" default="{!v.postRecord.Content__c}" type="String"></aura:attribute>   
     <aura:attribute name="labelProcessed"  type="String" ></aura:attribute>
     
-    <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea" >
+    <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea" onkeydown="{!c.keyCheck}" >
     	<lightning:textarea name="text" value="{!v.labelText}" 
                             label="Enter the content here: " maxlength="300" 
-                            onchange="{!c.recordUpdated}"/>    	
+                            onchange="{!c.recordUpdated}"  />    	
     </div>
     <hr></hr>
     <div maxlength="300">
